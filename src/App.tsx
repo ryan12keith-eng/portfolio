@@ -39,6 +39,9 @@ function Nav() {
               {label}
             </a>
           ))}
+          <a href={contact.resumePage} onClick={() => setOpen(false)}>
+            Resume
+          </a>
           <a className="nav-cta" href={`mailto:${contact.email}`}>
             Hire me <Icon name="arrow" />
           </a>
@@ -89,8 +92,8 @@ function Hero() {
               <a className="btn btn-dark" href="#flagship">
                 See the flagship <Icon name="arrow" />
               </a>
-              <a className="btn btn-line" href="#contact">
-                Contact me
+              <a className="btn btn-line" href={contact.resumePdf} download>
+                <Icon name="file" /> Download CV
               </a>
             </div>
           </div>
@@ -524,6 +527,7 @@ function Contact() {
     { icon: 'send', label: 'Telegram', value: contact.telegram, href: contact.telegramHref },
     { icon: 'linkedin', label: 'LinkedIn', value: 'ryan-keith', href: contact.linkedin },
     { icon: 'github', label: 'GitHub', value: 'ryan12keith-eng', href: contact.github },
+    { icon: 'file', label: 'Resume', value: 'View or download CV', href: contact.resumePage },
   ]
   return (
     <section className="contact" id="contact">

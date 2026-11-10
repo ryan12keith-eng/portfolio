@@ -18,6 +18,7 @@ const paths: Record<string, string> = {
   close: 'M6 6l12 12M18 6L6 18',
   check: 'M20 6L9 17l-5-5',
   pin: 'M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z',
+  file: 'M14 2H6v20h12V6zM14 2v4h4M8 13h8M8 17h8',
   copy: 'M9 9h11v11H9zM5 15H4V4h11v1',
 }
 

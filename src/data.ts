@@ -19,6 +19,8 @@ export const contact = {
   telegramHref: 'https://t.me/rhino_234',
   linkedin: 'https://www.linkedin.com/in/ryan-keith-91a756444/',
   github: 'https://github.com/ryan12keith-eng',
+  resumePage: 'resume.html',
+  resumePdf: 'Ryan_Keith_Resume.pdf',
 }
 
 export type Tag = 'gis' | 'ai' | 'web'

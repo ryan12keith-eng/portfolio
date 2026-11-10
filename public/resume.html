@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ryan Keith | Resume</title>
+<meta name="description" content="Resume of Ryan Keith, Software Engineer in Kansas City: Python and TypeScript, FastAPI, PostgreSQL/PostGIS, React, and LLM-powered tools." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --ink: #0b0d17; --ink-2: #2b3047; --muted: #565d75; --line: #e3e7f0; --blue: #2f5bff; --lime: #c6f432; --bg: #f3f5ff; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 10.4pt/1.45 Inter, 'Segoe UI', Arial, sans-serif; }
+  a { color: var(--blue); text-decoration: none; }
+  .bar { position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 16px; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); font: 600 14px Inter, sans-serif; }
+  .bar a { color: var(--ink-2); }
+  .bar .dl { padding: 8px 16px; border-radius: 999px; background: var(--ink); color: #fff; }
+  .page { width: 8.5in; min-height: 11in; margin: 24px auto; padding: 0.55in 0.6in; background: #fff; box-shadow: 0 20px 50px -30px rgba(11,13,23,.4); }
+  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+  h1 { margin: 0; font: 800 28pt/1 'Bricolage Grotesque', Georgia, serif; letter-spacing: -0.03em; }
+  .role { margin-top: 4px; font: 600 12pt 'Bricolage Grotesque', Georgia, serif; color: var(--blue); }
+  .contact { text-align: right; font-size: 9.2pt; line-height: 1.55; color: var(--ink-2); }
+  h2 { margin: 14px 0 6px; font: 700 11.5pt 'Bricolage Grotesque', Georgia, serif; text-transform: uppercase; letter-spacing: .06em; color: var(--ink); }
+  h2::after { content: ''; display: block; height: 1px; margin-top: 3px; background: var(--line); }
+  p { margin: 0; }
+  .summary { color: var(--ink-2); }
+  .item { margin-top: 7px; break-inside: avoid; }
+  .item-head { display: flex; justify-content: space-between; gap: 12px; }
+  .item-head b { font-weight: 700; }
+  .item-head span { color: var(--muted); font-size: 9.2pt; white-space: nowrap; }
+  .sub { color: var(--muted); font-size: 9.2pt; margin-top: 1px; }
+  ul { margin: 3px 0 0; padding-left: 15px; }
+  li { margin: 1.5px 0; }
+  .skills { display: grid; grid-template-columns: 1.35in 1fr; gap: 2px 10px; }
+  .skills dt { font-weight: 700; }
+  .skills dd { margin: 0; color: var(--ink-2); }
+  .tag { display: inline-block; padding: 0 6px; border-radius: 4px; background: var(--lime); font-size: 8.4pt; font-weight: 700; vertical-align: 1px; margin-left: 4px; }
+  .links { font-size: 9pt; margin-top: 1px; }
+  @media screen and (max-width: 860px) {
+    .page { width: auto; min-height: 0; margin: 0; padding: 20px 16px; box-shadow: none; }
+    header { flex-direction: column; align-items: flex-start; }
+    .contact { text-align: left; }
+    .item-head { flex-direction: column; gap: 0; }
+    .skills { grid-template-columns: 1fr; }
+  }
+  @media print {
+    @page { size: Letter; margin: 0.42in 0.5in; }
+    body { background: #fff; font-size: 9.3pt; line-height: 1.36; }
+    h1 { font-size: 24pt; }
+    h2 { margin: 9px 0 4px; font-size: 10.5pt; }
+    .item { margin-top: 5px; }
+    li { margin: 0.5px 0; }
+    .contact, .item-head span, .sub, .links { font-size: 8.4pt; }
+    .bar { display: none; }
+    .page { width: auto; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<nav class="bar" aria-label="Resume actions">
+  <a href="./">← Portfolio</a>
+  <a class="dl" href="Ryan_Keith_Resume.pdf" download>Download PDF</a>
+</nav>
+<main class="page">
+  <header>
+    <div>
+      <h1>Ryan Keith</h1>
+      <div class="role">Software Engineer · Full-Stack, Geospatial &amp; AI Systems</div>
+    </div>
+    <div class="contact">
+      Kansas City, Missouri · <a href="tel:+18722465693">(872) 246-5693</a><br />
+      <a href="mailto:ryan12keith@gmail.com">ryan12keith@gmail.com</a><br />
+      <a href="https://www.linkedin.com/in/ryan-keith-91a756444/">linkedin.com/in/ryan-keith-91a756444</a><br />
+      <a href="https://github.com/ryan12keith-eng">github.com/ryan12keith-eng</a> ·
+      <a href="https://musical-marshmallow-0f8bd3.netlify.app/">Portfolio</a>
+    </div>
+  </header>
+
+  <h2>Summary</h2>
+  <p class="summary">
+    Software engineer at Amgraf, Inc. since February 2024, writing code since age 14. Builds Python backend systems: data pipelines (FastAPI, Celery,
+    PostgreSQL, AWS S3), LLM-powered tools (LangChain, Claude and OpenAI APIs) and internal IT automation (Django, Jira, Slack). Recent portfolio work adds
+    full-stack geospatial apps: React + TypeScript frontends, FastAPI services running spatial SQL on PostGIS, and CI that tests against a real database.
+    B.S. in Information Technology from the University of Kansas with a 4.0 GPA; Eagle Scout.
+  </p>
+
+  <h2>Experience</h2>
+  <div class="item">
+    <div class="item-head"><b>Software Engineer · Amgraf, Inc.</b><span>Kansas City, MO · Feb 2024 – Present</span></div>
+    <ul>
+      <li>Build Python backend services and data pipelines with FastAPI, Celery, PostgreSQL and AWS S3.</li>
+      <li>Develop LLM-powered internal tools with LangChain and the Claude and OpenAI APIs.</li>
+      <li>Automate internal IT workflows with Django, the Jira REST API and Slack integrations.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><b>Student Technician · Johnson County Community College</b><span>Overland Park, KS · Oct 2019 – Oct 2022</span></div>
+    <ul>
+      <li>Resolved student technical issues by phone and live chat, walking users through each fix step by step.</li>
+      <li>Built a Python tool that inserts commonly sent chat replies, cutting typos and speeding up live-chat support.</li>
+      <li>Automated a documentation ticket for every support interaction, saving technicians time after each session.</li>
+      <li>Presented a larger application to JCCC's full IT department.</li>
+    </ul>
+  </div>
+
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>Python, TypeScript, JavaScript, SQL, HTML/CSS</dd>
+    <dt>Frameworks</dt><dd>FastAPI, Django, React, Vite, Pydantic</dd>
+    <dt>Data &amp; GIS</dt><dd>PostgreSQL, PostGIS (spatial SQL, GiST indexes, KNN, hexagon grids), Redis, MapLibre GL JS, Turf.js, OpenStreetMap data</dd>
+    <dt>AI &amp; ML</dt><dd>Claude API (tool calling), OpenAI API, LangChain, Whisper speech-to-text, sentiment analysis, satellite image change detection</dd>
+    <dt>Infrastructure</dt><dd>Docker, Celery, AWS S3, GitHub Actions CI, Render, Netlify, GitHub Pages</dd>
+    <dt>Testing</dt><dd>pytest (incl. PostGIS integration tests), Vitest, Playwright</dd>
+    <dt>Integrations</dt><dd>Stripe, SendGrid, Jira REST API, Slack webhooks, ReportLab</dd>
+    <dt>Professional</dt><dd>Technical support, user communication, leadership, planning</dd>
+  </dl>
+
+  <h2>Portfolio projects</h2>
+  <p class="links">Live demos and source for every project: <a href="https://musical-marshmallow-0f8bd3.netlify.app/">musical-marshmallow-0f8bd3.netlify.app</a> ·
+    <a href="https://github.com/ryan12keith-eng/portfolio">github.com/ryan12keith-eng/portfolio</a> · 89 automated tests run in GitHub Actions</p>
+
+  <div class="item">
+    <div class="item-head"><b>GeoMind AI · Smart City GIS Platform <span class="tag">Flagship</span></b><span>React, TypeScript, MapLibre, FastAPI, PostGIS, Claude API</span></div>
+    <ul>
+      <li>Built a 3D map of central Kansas City with 441 real OpenStreetMap facilities and rivers, and a GIS assistant that answers plain-language questions.</li>
+      <li>FastAPI service runs parameterized PostGIS SQL: radius search, KNN nearest facility, school-coverage gaps on a hexagon grid, density and river proximity.</li>
+      <li>Assistant routes questions with Claude tool calling (strict schemas) when a key is configured, otherwise a rule-based router; answers always come from the database and show the SQL that ran.</li>
+      <li>Validated inputs and rate limiting; pytest suite runs against a PostGIS container in CI; frontend falls back to in-browser Turf.js when the API sleeps.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><b>LandScope AI · Land Suitability Scoring</b><span>React, FastAPI, PostGIS, PostgreSQL</span></div>
+    <ul>
+      <li>Measured 415 real land-use sites in a PostGIS materialized view: true area and geodesic distance to the nearest major road, school and hospital.</li>
+      <li>Ranked sites with configurable weights (scoring rules mirrored and tested in Python and TypeScript); saved site reports in PostgreSQL with shareable links.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><b>EarthWatch AI · Flood Change Detection</b><span>TypeScript, Canvas image analysis</span></div>
+    <ul>
+      <li>Compared NASA Landsat images of the 2024 Rufiji River flood pixel by pixel to detect newly flooded land (~11% of the scene), classify land cover and compute a vegetation index.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><b>Workflow apps · PrintFlow, Smart Quote Assistant, Job Application Tracker</b><span>React, TypeScript</span></div>
+    <ul>
+      <li>Print job and proof portal with role-based permissions, an enforced status workflow, validated uploads and an audit trail; quote-email spec extraction with deterministic, unit-tested pricing; drag-and-drop application tracker with posting analysis.</li>
+    </ul>
+  </div>
+
+  <h2>Earlier projects</h2>
+  <div class="item">
+    <div class="item-head"><b>Print-Job Billing &amp; Invoicing Engine</b><span>Python, FastAPI, Celery, Redis, PostgreSQL, Stripe, AWS S3</span></div>
+    <ul>
+      <li>Built an ingestion pipeline where Celery workers watch an S3 bucket and process uploaded PDF and PostScript print jobs in the background.</li>
+      <li>Wrote a parser that extracts page count, dimensions, color profiles and vector complexity to estimate each job's cost.</li>
+      <li>Designed a pricing API driven by a per-client pricing matrix that changes without a redeploy.</li>
+      <li>Integrated Stripe and SendGrid to generate invoices, email clients and export accounting manifests automatically.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><b>AI Customer Support QA Engine</b><span>Python, LangChain, Claude/OpenAI API, Whisper, React, PostgreSQL</span></div>
+    <ul>
+      <li>Built a batch pipeline that ingests chat logs (JSON/CSV) and transcribes support calls with Whisper.</li>
+      <li>Used an LLM to audit each conversation against support guidelines (greeting, identity verification, accuracy) and score technician compliance.</li>
+      <li>Added sentiment analysis that flags rising customer frustration or wrong answers; built a React dashboard of resolution time, sentiment trends and technician scores.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><b>IT Asset Provisioning &amp; Inventory System</b><span>Python, Django, PostgreSQL, Jira REST API, Slack, ReportLab, Docker</span></div>
+    <ul>
+      <li>Designed a schema tracking hardware serial and MAC addresses, purchase and warranty dates, and assigned employees.</li>
+      <li>Automated onboarding so each new-hire event opens a Jira ticket with a hardware setup checklist; scheduled stock checks alert purchasing in Slack.</li>
+      <li>Generated weekly ReportLab PDF reports on asset depreciation and assignments; containerized the app with Docker.</li>
+    </ul>
+  </div>
+
+  <h2>Education &amp; leadership</h2>
+  <div class="item">
+    <div class="item-head"><b>B.S., Information Technology · The University of Kansas</b><span>Aug 2021 – May 2023 · GPA 4.0</span></div>
+  </div>
+  <div class="item">
+    <div class="item-head"><b>A.S., Information Technology · Johnson County Community College</b><span>2019 – 2021</span></div>
+  </div>
+  <ul>
+    <li><b>Eagle Scout</b>, Boy Scouts of America: earned at 17 after five years of leadership and service projects.</li>
+    <li><b>Full-time volunteer missionary</b>, British Columbia, Canada: two years of daily outreach, which built communication and self-directed planning skills.</li>
+  </ul>
+</main>
+</body>
+</html>
