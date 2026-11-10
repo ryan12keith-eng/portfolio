@@ -4,3 +4,7 @@ dist
 
 # Private interview deck and speaker notes; not part of the site
 *.pptx
+.venv
+__pycache__/
+.pytest_cache/
+.env

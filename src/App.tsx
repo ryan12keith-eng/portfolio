@@ -253,6 +253,7 @@ function Flagship() {
                 <li key={s}>{s}</li>
               ))}
             </ul>
+            <ProjectLinks p={p} big />
             <div className="flag-objectives" data-reveal="up" style={d(0.15)}>
               <h3 className="panel-title">Main objectives</h3>
               <ol className="objectives">
@@ -364,6 +365,19 @@ function Flagship() {
 
 const filters: ('all' | Tag)[] = ['all', 'gis', 'ai', 'web']
 
+function ProjectLinks({ p, big = false }: { p: Project; big?: boolean }) {
+  return (
+    <div className={`project-links ${big ? 'big' : ''}`}>
+      <a className="btn btn-dark" href={p.demo}>
+        Live demo <Icon name="arrow" />
+      </a>
+      <a className="btn btn-line" href={p.source} target="_blank" rel="noreferrer">
+        <Icon name="github" /> Source code
+      </a>
+    </div>
+  )
+}
+
 function ProjectCard({ p, index }: { p: Project; index: number }) {
   const photos = photosFor(p)
   const [active, setActive] = useState(0)
@@ -421,6 +435,7 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
             <li key={s}>{s}</li>
           ))}
         </ul>
+        <ProjectLinks p={p} />
       </div>
     </article>
   )

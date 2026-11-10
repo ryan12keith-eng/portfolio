@@ -1,0 +1,252 @@
+.ew {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 14px;
+  padding: 14px;
+  align-items: start;
+}
+.viewer-wrap {
+  display: grid;
+  gap: 8px;
+}
+.viewer {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  touch-action: none;
+  background: #0b0d17;
+}
+.viewer img,
+.viewer canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  image-rendering: pixelated;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  margin-left: -1.5px;
+  background: #fff;
+  pointer-events: none;
+}
+.handle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  font-size: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+.tag {
+  position: absolute;
+  top: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(11, 13, 23, 0.75);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  pointer-events: none;
+}
+.tag.left {
+  left: 12px;
+}
+.tag.right {
+  right: 12px;
+}
+.loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgba(11, 13, 23, 0.5);
+}
+.split-range {
+  width: 100%;
+  accent-color: var(--mint);
+}
+.credit {
+  font-size: 12.5px;
+}
+.ew-side {
+  display: grid;
+  gap: 12px;
+}
+.layers {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.layers button {
+  display: grid;
+  text-align: left;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+}
+.layers button span {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.layers button.on {
+  border-color: var(--mint);
+  box-shadow: 0 0 0 3px var(--mint-soft);
+}
+.seg {
+  margin-bottom: 10px;
+}
+.seg > div {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 10px;
+  background: var(--bg);
+}
+.seg button {
+  border: 0;
+  background: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.seg button.on {
+  background: var(--ink);
+  color: #fff;
+}
+.slider {
+  display: grid;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  margin-bottom: 8px;
+}
+.slider input {
+  accent-color: var(--mint);
+}
+.legend {
+  list-style: none;
+  display: grid;
+  gap: 5px;
+  font-size: 13px;
+}
+.legend i,
+.hist figcaption i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+.ramp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.ramp i {
+  flex: 1;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgb(140, 81, 10), rgb(246, 232, 160), rgb(26, 152, 80));
+}
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.kpis > div {
+  display: grid;
+}
+.kpis .label {
+  margin: 0;
+  font-size: 11px;
+}
+.kpis b {
+  font: 800 26px var(--display);
+}
+.orange {
+  color: #e05a00;
+}
+.red {
+  color: var(--red);
+}
+.small {
+  font-size: 12.5px;
+}
+.cover {
+  display: grid;
+  gap: 10px;
+}
+.cover-row {
+  display: grid;
+  grid-template-columns: 112px 1fr 64px;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.bars {
+  display: grid;
+  gap: 3px;
+}
+.bars span {
+  height: 8px;
+  border-radius: 4px;
+  min-width: 2px;
+}
+.delta {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+.delta.up {
+  color: #e05a00;
+  font-weight: 700;
+}
+.delta.down {
+  color: var(--blue);
+  font-weight: 700;
+}
+.hist {
+  margin: 0;
+}
+.hist svg {
+  width: 100%;
+  display: block;
+}
+.hist figcaption {
+  display: flex;
+  gap: 16px;
+  font-size: 12.5px;
+  margin-top: 4px;
+}
+@media (max-width: 1000px) {
+  .ew {
+    grid-template-columns: 1fr;
+  }
+}

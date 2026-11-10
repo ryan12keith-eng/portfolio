@@ -83,11 +83,19 @@ export type Project = {
   summary: string
   highlights: string[]
   stack: string[]
+  /** Live demo built from projects/<id>/ */
+  demo: string
+  /** Source folder on GitHub */
+  source: string
 }
+
+const REPO = 'https://github.com/ryan12keith-eng/portfolio/tree/main/projects/'
+const links = (id: string) => ({ demo: `projects/${id}/`, source: REPO + id })
 
 export const projects: Project[] = [
   {
     id: 'geomind',
+    ...links('geomind'),
     name: 'GeoMind AI',
     subtitle: 'Smart City Intelligence Platform',
     tags: ['gis', 'ai', 'web'],
@@ -112,6 +120,7 @@ export const projects: Project[] = [
   },
   {
     id: 'landscope',
+    ...links('landscope'),
     name: 'LandScope AI',
     subtitle: 'Real Estate & Land Intelligence',
     tags: ['gis', 'ai', 'web'],
@@ -136,6 +145,7 @@ export const projects: Project[] = [
   },
   {
     id: 'earthwatch',
+    ...links('earthwatch'),
     name: 'EarthWatch AI',
     subtitle: 'Environmental Monitoring & Disaster Intelligence',
     tags: ['gis', 'ai'],
@@ -159,6 +169,7 @@ export const projects: Project[] = [
   },
   {
     id: 'job-tracker',
+    ...links('job-tracker'),
     name: 'Job Application Tracker',
     subtitle: 'AI-assisted career dashboard',
     tags: ['web', 'ai'],
@@ -182,6 +193,7 @@ export const projects: Project[] = [
   },
   {
     id: 'printflow',
+    ...links('printflow'),
     name: 'PrintFlow',
     subtitle: 'Print Job & Proof Portal',
     tags: ['web'],
@@ -205,6 +217,7 @@ export const projects: Project[] = [
   },
   {
     id: 'quote-assistant',
+    ...links('quote-assistant'),
     name: 'Smart Quote Assistant',
     subtitle: 'From messy emails to print specs',
     tags: ['web', 'ai'],

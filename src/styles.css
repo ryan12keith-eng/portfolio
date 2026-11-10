@@ -1892,6 +1892,22 @@ button {
   padding-bottom: 10px;
 }
 
+/* ---------- project links ---------- */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+.project-links .btn {
+  padding: 11px 18px;
+  font-size: 15px;
+}
+.project-links.big .btn {
+  padding: 14px 22px;
+  font-size: 16px;
+}
+
 /* ---------- Q&A + contact layout ---------- */
 .qa-title {
   margin-top: 40px;
