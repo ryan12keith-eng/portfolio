@@ -9,8 +9,8 @@ jobs:
     name: Portfolio + demo apps (build and unit tests)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -41,12 +41,23 @@ jobs:
     env:
       DATABASE_URL: postgresql://app:app@localhost:5432/app
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: projects/${{ matrix.app }}/api/requirements-dev.txt
       - run: pip install -r requirements-dev.txt
       - run: python -m app.seed
-      - run: python -m pytest -v
+      - name: pytest
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest -v -rf --tb=short 2>&1 | tee pytest.log
+      - name: Report failing tests as annotations
+        if: failure()
+        shell: bash
+        run: |
+          # Annotations are visible on the run page without downloading logs.
+          grep -E "^(FAILED|ERROR) " pytest.log | head -20 | while read -r line; do echo "::error title=${{ matrix.app }} test::${line}"; done
+          grep -E "^E  " pytest.log | head -15 | while read -r line; do echo "::error title=${{ matrix.app }} assertion::${line}"; done

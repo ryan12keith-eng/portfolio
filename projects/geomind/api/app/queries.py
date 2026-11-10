@@ -52,11 +52,17 @@ def within(conn: psycopg.Connection, kind: Kind, lon: float, lat: float, radius_
 
 
 def nearest(conn: psycopg.Connection, kind: Kind, lon: float, lat: float, limit: int = 3) -> dict[str, Any]:
+    # <-> ranks by planar degrees, which skews east-west vs north-south distances, so it only
+    # shortlists candidates via the index; the final order uses true geodesic meters.
     sql = f"""
-      SELECT id, kind, name, ST_Distance(geom::geography, {POINT}::geography) AS meters
-      FROM facilities
-      WHERE kind = %(kind)s
-      ORDER BY geom <-> {POINT}
+      SELECT * FROM (
+        SELECT id, kind, name, ST_Distance(geom::geography, {POINT}::geography) AS meters
+        FROM facilities
+        WHERE kind = %(kind)s
+        ORDER BY geom <-> {POINT}
+        LIMIT %(limit)s * 5
+      ) candidates
+      ORDER BY meters
       LIMIT %(limit)s
     """
     params = {"kind": kind, "lon": lon, "lat": lat, "limit": limit}
