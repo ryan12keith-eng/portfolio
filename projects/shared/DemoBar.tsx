@@ -18,7 +18,7 @@ export function DemoBar({ id, name, tagline, note, accent = '#2f5bff' }: { id: s
       </div>
       <div className="demo-actions">
         <button className="demo-chip" onClick={() => setShowNote((v) => !v)} aria-expanded={showNote}>
-          About this demo
+          About this project
         </button>
         <a className="demo-chip demo-chip-dark" href={REPO + id} target="_blank" rel="noreferrer">
           Source code ↗

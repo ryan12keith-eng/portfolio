@@ -234,7 +234,7 @@ export default function App() {
               API key is configured on the server, otherwise with a rule-based router. The answer always comes from the database.
             </p>
             <p>
-              <b>In-browser:</b> if the server is asleep or unreachable, the same queries run locally with Turf.js so the demo never breaks. Open “How this was answered” on any
+              <b>In-browser:</b> if the server is asleep or unreachable, the same queries run locally with Turf.js so the app keeps working. Open “How this was answered” on any
               reply to see the tool call and the exact SQL.
             </p>
           </>

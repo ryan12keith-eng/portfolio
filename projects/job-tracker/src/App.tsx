@@ -211,7 +211,7 @@ export default function App() {
               <SkillEditor skills={mySkills} onChange={setMySkills} />
             </section>
             <button className="btn btn-ghost btn-sm" onClick={() => { setApps(seed()); setMySkills(DEFAULT_SKILLS) }}>
-              Reset demo data
+              Reset sample data
             </button>
           </aside>
         </div>

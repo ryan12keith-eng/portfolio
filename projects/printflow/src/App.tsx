@@ -31,7 +31,7 @@ const USERS: Record<Role, { name: string; label: string; company?: string }> = {
 }
 const CUSTOMER = USERS.customer.company!
 
-/** A simple brochure-style proof, drawn as SVG so the demo works without uploads. */
+/** A simple brochure-style proof, drawn as SVG so the app works without uploads. */
 function sampleProof(title: string, hue: number) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
   <rect width="600" height="800" fill="#f4f1ea"/>
@@ -215,7 +215,7 @@ export default function App() {
         note={
           <>
             <p>Switch roles at the top left to see what customers, CSRs and production staff can each do. Status changes, permissions and upload checks come from <code>workflow.ts</code> (10 unit tests).</p>
-            <p>Data is saved in this browser so the demo needs no server. The production design runs the same rules in an Express API with PostgreSQL, S3 file storage and JWT auth.</p>
+            <p>Data is saved in this browser so it works without a server. The production design runs the same rules in an Express API with PostgreSQL, S3 file storage and JWT auth.</p>
           </>
         }
       />
@@ -251,7 +251,7 @@ export default function App() {
           </ul>
           {role === 'customer' && <p className="muted tiny">Customers only see their own company's jobs.</p>}
           <button className="btn btn-ghost btn-sm reset" onClick={() => { setJobs(seedJobs()); setEmails([]); setSelectedId(null) }}>
-            Reset demo data
+            Reset sample data
           </button>
         </aside>
 

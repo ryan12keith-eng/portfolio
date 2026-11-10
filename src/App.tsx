@@ -372,7 +372,7 @@ function ProjectLinks({ p, big = false }: { p: Project; big?: boolean }) {
   return (
     <div className={`project-links ${big ? 'big' : ''}`}>
       <a className="btn btn-dark" href={p.demo}>
-        Live demo <Icon name="arrow" />
+        View live <Icon name="arrow" />
       </a>
       <a className="btn btn-line" href={p.source} target="_blank" rel="noreferrer">
         <Icon name="github" /> Source code

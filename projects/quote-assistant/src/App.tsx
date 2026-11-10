@@ -138,7 +138,7 @@ export default function App() {
           <>
             <p>Paste a quote request, extract the specs, review anything flagged, then approve.</p>
             <p>
-              To run offline, this demo extracts specs with a rule-based parser. The production design sends the email to an LLM that returns the same schema,
+              To run offline, this version extracts specs with a rule-based parser. The production design sends the email to an LLM that returns the same schema,
               then runs the same validation. Prices always come from the tested pricing rules, never from the model.
             </p>
           </>
