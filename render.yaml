@@ -1,0 +1,44 @@
+# Render Blueprint: deploys the GeoMind API (FastAPI) as a free Docker web service.
+# The database is external (Neon free Postgres with PostGIS); paste its URL as DATABASE_URL.
+services:
+  - type: web
+    name: geomind-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./projects/geomind/api/Dockerfile
+    dockerContext: ./projects/geomind
+    buildFilter:
+      paths:
+        - projects/geomind/**
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        sync: false # set in the Render dashboard
+      - key: SEED_ON_STARTUP
+        value: "true" # creates tables and loads data on first boot if empty
+      - key: CORS_ORIGINS
+        value: https://ryan12keith-eng.github.io,http://127.0.0.1:5174,http://localhost:5174
+      - key: ANTHROPIC_API_KEY
+        sync: false # optional: leave empty to use the rule-based assistant
+
+  - type: web
+    name: landscope-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./projects/landscope/api/Dockerfile
+    dockerContext: ./projects/landscope
+    buildFilter:
+      paths:
+        - projects/landscope/**
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        sync: false # can be the same Neon database as GeoMind (tables are prefixed ls_)
+      - key: SEED_ON_STARTUP
+        value: "true"
+      - key: CORS_ORIGINS
+        value: https://ryan12keith-eng.github.io,http://127.0.0.1:5174,http://localhost:5174
+      - key: ANTHROPIC_API_KEY
+        sync: false # optional: adds a Claude-written summary to saved reports

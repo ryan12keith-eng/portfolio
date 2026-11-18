@@ -1,0 +1,14 @@
+# Netlify: build the portfolio and all demo apps, then publish the built files.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Optional: set GEOMIND_API / LANDSCOPE_API URLs in Netlify's environment variables
+  # as VITE_GEOMIND_API and VITE_LANDSCOPE_API to connect the live PostGIS APIs.
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
