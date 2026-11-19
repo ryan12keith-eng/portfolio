@@ -523,7 +523,6 @@ function Contact() {
     }
   }
   const methods = [
-    { icon: 'phone', label: 'Phone', value: contact.phone, href: contact.phoneHref },
     { icon: 'send', label: 'Telegram', value: contact.telegram, href: contact.telegramHref },
     { icon: 'linkedin', label: 'LinkedIn', value: 'ryan-keith', href: contact.linkedin },
     { icon: 'github', label: 'GitHub', value: 'ryan12keith-eng', href: contact.github },

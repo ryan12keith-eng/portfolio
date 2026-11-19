@@ -13,8 +13,6 @@ export const profile = {
 
 export const contact = {
   email: 'ryan12keith@gmail.com',
-  phone: '(872) 246-5693',
-  phoneHref: 'tel:+18722465693',
   telegram: '@rhino_234',
   telegramHref: 'https://t.me/rhino_234',
   linkedin: 'https://www.linkedin.com/in/ryan-keith-91a756444/',
